@@ -1,0 +1,43 @@
+name: Atualizar playlist IPTV Serrinha-BA
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v3
+
+      - name: Baixar canais da Bahia (iptv-org)
+        run: |
+          curl -sL https://iptv-org.github.io/iptv/subdivisions/br-ba.m3u -o br-ba.m3u
+
+      - name: Gerar playlist final
+        run: |
+          echo "#EXTM3U" > playlist_serrinha_ba.m3u
+          echo "" >> playlist_serrinha_ba.m3u
+          echo "# ===== Canais Abertos Principais =====" >> playlist_serrinha_ba.m3u
+          echo "#EXTINF:-1,Globo" >> playlist_serrinha_ba.m3u
+          echo "http://example.com/globo.m3u8" >> playlist_serrinha_ba.m3u
+          echo "#EXTINF:-1,SBT" >> playlist_serrinha_ba.m3u
+          echo "http://example.com/sbt.m3u8" >> playlist_serrinha_ba.m3u
+          echo "#EXTINF:-1,Record" >> playlist_serrinha_ba.m3u
+          echo "http://example.com/record.m3u8" >> playlist_serrinha_ba.m3u
+          echo "#EXTINF:-1,Band" >> playlist_serrinha_ba.m3u
+          echo "http://example.com/band.m3u8" >> playlist_serrinha_ba.m3u
+          echo "" >> playlist_serrinha_ba.m3u
+          echo "# ===== Canais da Bahia (iptv-org) =====" >> playlist_serrinha_ba.m3u
+          cat br-ba.m3u >> playlist_serrinha_ba.m3u
+
+      - name: Commit automático
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add playlist_serrinha_ba.m3u
+          git commit -m "Atualização automática da playlist" || echo "Sem mudanças"
+          git push
