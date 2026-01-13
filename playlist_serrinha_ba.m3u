@@ -1,15 +1,18 @@
 #EXTM3U
 
 # ===== Canais Abertos Principais =====
-
-#EXTINF:-1,Globo (placeholder)
+#EXTINF:-1,Globo
 http://example.com/globo.m3u8
-
-#EXTINF:-1,SBT (placeholder)
+#EXTINF:-1,SBT
 http://example.com/sbt.m3u8
-
-#EXTINF:-1,Record (placeholder)
+#EXTINF:-1,Record
 http://example.com/record.m3u8
-
-#EXTINF:-1,Band (placeholder)
+#EXTINF:-1,Band
 http://example.com/band.m3u8
+
+# ===== Canais da Bahia (iptv-org) =====
+#EXTM3U
+#EXTINF:-1 tvg-id="TVCamaraSalvador.br@SD" tvg-logo="https://i.imgur.com/VEXEzSx.png" group-title="Legislative",TV Câmara Salvador (288p) [Not 24/7]
+https://596639ebdd89b.streamlock.net/8114/8114/playlist.m3u8
+#EXTINF:-1 tvg-id="TVNBN.br@SD" tvg-logo="https://i.imgur.com/zoHBxn1.png" group-title="General",TVNBN (720p)
+https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
