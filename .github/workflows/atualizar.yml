@@ -18,21 +18,35 @@ jobs:
           curl -sL https://iptv-org.github.io/iptv/subdivisions/br-ba.m3u -o br-ba.m3u
 
       - name: Gerar playlist final
-        run: |
-          echo "#EXTM3U" > playlist_serrinha_ba.m3u
-          echo "" >> playlist_serrinha_ba.m3u
-          echo "# ===== Canais Abertos Principais =====" >> playlist_serrinha_ba.m3u
-          echo "#EXTINF:-1,Globo" >> playlist_serrinha_ba.m3u
-          echo "http://example.com/globo.m3u8" >> playlist_serrinha_ba.m3u
-          echo "#EXTINF:-1,SBT" >> playlist_serrinha_ba.m3u
-          echo "http://example.com/sbt.m3u8" >> playlist_serrinha_ba.m3u
-          echo "#EXTINF:-1,Record" >> playlist_serrinha_ba.m3u
-          echo "http://example.com/record.m3u8" >> playlist_serrinha_ba.m3u
-          echo "#EXTINF:-1,Band" >> playlist_serrinha_ba.m3u
-          echo "http://example.com/band.m3u8" >> playlist_serrinha_ba.m3u
-          echo "" >> playlist_serrinha_ba.m3u
-          echo "# ===== Canais da Bahia (iptv-org) =====" >> playlist_serrinha_ba.m3u
-          grep -v '^#EXTM3U' br-ba.m3u >> playlist_serrinha_ba.m3u
+  run: |
+    echo "#EXTM3U" > playlist_serrinha_ba.m3u
+    echo "" >> playlist_serrinha_ba.m3u
+
+    echo "# ===== Canais Abertos Nacionais =====" >> playlist_serrinha_ba.m3u
+
+    # Baixar fontes adicionais
+    curl -sL https://raw.githubusercontent.com/PaulinhoProjects/IPTV-BR/main/Paulo.m3u -o fonte1.m3u
+    curl -sL https://gist.githubusercontent.com/oLucasZ7/3f0c1e0c9098a1fdb9d80fbb9f39de2e/raw -o fonte2.m3u
+
+    # Unificar fontes e remover cabeçalhos
+    cat fonte1.m3u fonte2.m3u | grep -v '^#EXTM3U' > fontes_unificadas.m3u
+
+    # Filtrar canais desejados
+    grep -i -E 'Globo|SBT|Record|Band|Cultura|RedeTV|Aparecida' fontes_unificadas.m3u > filtrados.m3u
+
+    # Remover URLs duplicadas (mantém primeiro)
+    awk '!seen[$0]++' filtrados.m3u > unicos.m3u
+
+    # Padronizar group-title
+    sed -E 's/group-title="[^"]*"/group-title="Abertos BR"/' unicos.m3u >> playlist_serrinha_ba.m3u
+
+    echo "" >> playlist_serrinha_ba.m3u
+    echo "# ===== Canais da Bahia =====" >> playlist_serrinha_ba.m3u
+
+    # Canais da Bahia (iptv-org)
+    grep -v '^#EXTM3U' br-ba.m3u \
+      | sed -E 's/group-title="[^"]*"/group-title="Bahia"/' \
+      >> playlist_serrinha_ba.m3u
 
       - name: Commit automático
         run: |
