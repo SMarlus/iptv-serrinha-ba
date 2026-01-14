@@ -1,18 +1,78 @@
 #EXTM3U
+#EXTINF:-1 logo="https://i.imgur.com/AAAAAA.png", ATUALIZADO EM 14/01/2026 00:55
+http://fake.url/info.mp4
 
-# ===== Canais Abertos Principais =====
-#EXTINF:-1,Globo
-http://example.com/globo.m3u8
-#EXTINF:-1,SBT
-http://example.com/sbt.m3u8
-#EXTINF:-1,Record
-http://example.com/record.m3u8
-#EXTINF:-1,Band
-http://example.com/band.m3u8
+# ===== Canais Abertos Nacionais =====
+# Globo (vários estados)
+##########################
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo São Paulo (SP)
+https://globo-sp.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo Rio de Janeiro (RJ)
+https://globo-rj.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo Minas Gerais (MG)
+https://globo-mg.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo Recife (PE)
+https://globo-pe.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo Bahia (BA)
+https://globo-ba.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo Fortaleza (CE)
+https://globo-ce.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/Globo_logo.png" group-title="Abertos BR",Globo Brasília (DF)
+https://globo-df.cdnlive.com.br/playlist.m3u8
 
-# ===== Canais da Bahia (iptv-org) =====
-#EXTM3U
-#EXTINF:-1 tvg-id="TVCamaraSalvador.br@SD" tvg-logo="https://i.imgur.com/VEXEzSx.png" group-title="Legislative",TV Câmara Salvador (288p) [Not 24/7]
+# RecordTV (vários estados)
+##########################
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/RecordTV_logo.png" group-title="Abertos BR",Record São Paulo (SP)
+https://record-sp.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/RecordTV_logo.png" group-title="Abertos BR",Record Rio de Janeiro (RJ)
+https://record-rj.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/RecordTV_logo.png" group-title="Abertos BR",Record Minas Gerais (MG)
+https://record-mg.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/RecordTV_logo.png" group-title="Abertos BR",Record Bahia (BA)
+https://record-ba.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/RecordTV_logo.png" group-title="Abertos BR",Record Brasília (DF)
+https://record-df.cdnlive.com.br/playlist.m3u8
+
+# SBT (vários estados)
+##########################
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/SBT_logo.png" group-title="Abertos BR",SBT São Paulo (SP)
+https://sbt-sp.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/SBT_logo.png" group-title="Abertos BR",SBT Rio de Janeiro (RJ)
+https://sbt-rj.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/SBT_logo.png" group-title="Abertos BR",SBT Minas Gerais (MG)
+https://sbt-mg.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/SBT_logo.png" group-title="Abertos BR",SBT Bahia (BA)
+https://sbt-ba.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/SBT_logo.png" group-title="Abertos BR",SBT Brasília (DF)
+https://sbt-df.cdnlive.com.br/playlist.m3u8
+
+# Band (vários estados)
+##########################
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5e/Band_logo_2022.png" group-title="Abertos BR",Band São Paulo (SP)
+https://band-sp.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5e/Band_logo_2022.png" group-title="Abertos BR",Band Rio de Janeiro (RJ)
+https://band-rj.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5e/Band_logo_2022.png" group-title="Abertos BR",Band Minas Gerais (MG)
+https://band-mg.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5e/Band_logo_2022.png" group-title="Abertos BR",Band Bahia (BA)
+https://band-ba.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5e/Band_logo_2022.png" group-title="Abertos BR",Band Brasília (DF)
+https://band-df.cdnlive.com.br/playlist.m3u8
+
+# Cultura
+##########################
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/Logo_TV_Cultura_2016.svg" group-title="Abertos BR",TV Cultura (SP)
+https://cultura-sp.cdnlive.com.br/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/Logo_TV_Cultura_2016.svg" group-title="Abertos BR",TV Cultura (Outros estados)
+https://cultura-others.cdnlive.com.br/playlist.m3u8
+
+# RedeTV
+##########################
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/af/RedeTV%21_logo.svg" group-title="Abertos BR",RedeTV (Nacional)
+https://redetv.cdnlive.com.br/playlist.m3u8
+
+# ===== Canais da Bahia =====
+#EXTINF:-1 tvg-id="TVCamaraSalvador.br@SD" tvg-logo="https://i.imgur.com/VEXEzSx.png" group-title="Bahia",TV Câmara Salvador (288p) [Not 24/7]
 https://596639ebdd89b.streamlock.net/8114/8114/playlist.m3u8
-#EXTINF:-1 tvg-id="TVNBN.br@SD" tvg-logo="https://i.imgur.com/zoHBxn1.png" group-title="General",TVNBN (720p)
+#EXTINF:-1 tvg-id="TVNBN.br@SD" tvg-logo="https://i.imgur.com/zoHBxn1.png" group-title="Bahia",TVNBN (720p)
 https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
